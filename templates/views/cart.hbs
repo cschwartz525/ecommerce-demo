@@ -19,7 +19,12 @@
 								<td class="cart-contents__item__name">{{{this.name}}}</td>
 								<td class="cart-contents__item__price">${{{this.priceString}}}</td>
 								<td class="cart-contents__item__quantity">{{{this.quantity}}}</td>
-								<td><img class="cart-contents__item__image" src="{{{this.imageUrl}}}"></img></td>
+								<td>
+										<img class="cart-contents__item__image" src="{{{this.imageUrl}}}"></img>
+								</td>
+								<td class="no-border">
+										<a class="cart-contents__item__removeLink" href="/remove-from-cart/{{{this.id}}}">Remove</a>
+								</td>
 						</tr>
 						{{/each}}
 				</tbody>
