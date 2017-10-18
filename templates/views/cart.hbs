@@ -1,0 +1,24 @@
+{{!< default}}
+<div class="container">
+		<h1>Shopping Cart</h1>
+		<table class="cart-contents">
+				<thead>
+						<tr class="cart-contents__heading">
+								<td>Item Name</td>
+								<td>Price ($)</td>
+								<td>Quantity</td>
+								<td>Image</td>
+						</tr>
+				</thead>
+				<tbody>
+						{{# each cartContents}}
+						<tr>
+								<td class="cart-contents__item__name">{{{this.name}}}</td>
+								<td class="cart-contents__item__price">${{{this.priceString}}}</td>
+								<td class="cart-contents__item__quantity">{{{this.quantity}}}</td>
+								<td><img class="cart-contents__item__image" src="{{{this.imageUrl}}}"></img></td>
+						</tr>
+						{{/each}}
+				</tbody>
+		</table>
+</div>

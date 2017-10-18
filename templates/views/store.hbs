@@ -1,0 +1,15 @@
+{{!< default}}
+<div class="container">
+		<h1>Store</h1>
+		<ul class="product-list">
+				{{# each products}}
+				<li class="product-list__item" product-id="{{{this.id}}}" product-price="{{{this.price}}}">
+						<h3 class="product-list__item__name">{{{this.name}}}</h3>
+						<p class="product-list__item__price">${{{this.priceString}}}</p>
+						<img class="product-list__item__image" src="{{{this.imageUrl}}}"></img>
+						<a class="product-list__item__button" href="/add-to-cart/{{{this.id}}}">Add to cart</a>
+				</li>
+				{{/each}}
+				</tbody>
+		</ul>
+</div>
