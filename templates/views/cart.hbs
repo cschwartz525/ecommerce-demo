@@ -1,6 +1,9 @@
 {{!< default}}
 <div class="container">
 		<h1>Shopping Cart</h1>
+		{{#if isCartEmpty}}
+		<p>Shopping cart is empty</p>
+		{{else}}
 		<table class="cart-contents">
 				<thead>
 						<tr class="cart-contents__heading">
@@ -21,4 +24,5 @@
 						{{/each}}
 				</tbody>
 		</table>
+		{{/if}}
 </div>

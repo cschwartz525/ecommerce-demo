@@ -25,6 +25,7 @@ exports = module.exports = function (req, res) {
 		}
 	});
 	res.locals.cartContents = cartContents;
+	res.locals.isCartEmpty = req.session.cart.length === 0;
 
 	// Render the view
 	view.render('cart');
