@@ -31,4 +31,4 @@ node_modules
 .DS_Store
 
 # Ignore minified files
-public/styles/site.min.less
+public/styles/site.min.css
