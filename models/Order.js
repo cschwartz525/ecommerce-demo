@@ -8,13 +8,17 @@ var Types = keystone.Field.Types;
 var Order = new keystone.List('Order', { nocreate: true, noedit: true });
 
 Order.add({
-	customer: { type: Types.Relationship, ref: 'User', many: false, required: true, initial: true },
+	name: { type: Types.Name, required: true, initial: true },
+	email: { type: Types.Email, required: true, initial: true },
+	address: { type: String, required: true, initial: true },
+	orderId: { type: String, required: true, initial: true },
+	timestamp: { type: Types.Datetime, default: Date.now },
 	products: { type: Types.Relationship, ref: 'Product', many: true, required: true, initial: true },
 });
 
 /**
  * Registration
  */
-Order.defaultSort = '-createdAt';
-Order.defaultColumns = 'customer, products';
+Order.defaultSort = '-timestamp';
+Order.defaultColumns = 'name, email, address, orderId, products, timestamp';
 Order.register();

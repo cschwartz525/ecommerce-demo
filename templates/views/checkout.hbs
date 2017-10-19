@@ -1,0 +1,42 @@
+{{!< default}}
+<div class="container">
+		<div class="text-center">
+				<h1>Your Order</h1>
+				<h4>Total Price: ${{totalPriceString}}</h4>
+		</div>
+		<form id="checkout-form" class="form-horizontal" method="post" action="/checkout">
+				<div class="form-group">
+						<input name="email" type="text" class="form-control" placeholder="Email Address" />
+				</div>
+				<div class="form-group">
+						<input name="firstName" type="text" class="form-control" placeholder="First Name" />
+				</div>
+				<div class="form-group">
+						<input name="lastName" type="text" class="form-control" placeholder="Last Name" />
+				</div>
+				<div class="form-group">
+						<input name="addressLine1" type="text" class="form-control" placeholder="Address Line 1" />
+				</div>
+				<div class="form-group">
+						<input name="addressLine2" type="text" class="form-control" placeholder="Address Line 2" />
+				</div>
+				<div class="form-group">
+						<input name="city" type="text" class="form-control" placeholder="City" />
+				</div>
+				<div class="form-group">
+						<input name="state" type="text" class="form-control" placeholder="State" />
+				</div>
+				<div class="form-group">
+						<input name="zipcode" type="text" class="form-control" placeholder="Zip Code" />
+				</div>
+				<div class="form-group">
+						<input name="cardNumber" type="text" class="form-control" placeholder="Credit Card Number" />
+				</div>
+				<div class="form-group">
+						<input name="cvv" type="text" class="form-control" placeholder="CVV" />
+				</div>
+				<div class="form-group">
+						<input type="submit" class="btn btn-primary" value="Place Order" />
+				</div>
+		</form>
+</div>
